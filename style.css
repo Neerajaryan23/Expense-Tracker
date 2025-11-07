@@ -1,0 +1,240 @@
+/* === General Reset === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* === Body === */
+body {
+  background: #f2f5f9;
+  color: #222;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 40px 15px;
+  overflow-x: hidden;
+}
+
+/* === Container === */
+.container {
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 5px 5px 12px rgba(0,0,0,0.2),
+              -5px -5px 12px rgba(255,255,255,0.6);
+  width: 100%;
+  max-width: 480px;
+  padding: 25px 25px 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  cursor: pointer;
+}
+
+/* === Headings === */
+h2 {
+  margin-bottom: 12px;
+  color: #222;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 6px;
+  text-align: center;
+}
+
+/* === Input Sections === */
+.budget-section,
+.input-section {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.2),
+              -5px -5px 10px rgba(255,255,255,0.5);
+  padding: 15px;
+  margin-bottom: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+#set-budget-btn {
+  flex: 1;
+  background: #2e7d32;
+  color: #fff;
+  border: none;
+  font-weight: 500;
+  border-radius: 8px;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.2),
+              -2px -2px 5px rgba(255,255,255,0.6);
+}
+
+#set-budget-btn:hover {
+  background: #256728;
+  transform: scale(1.03);
+}
+
+/* === Inputs & Select === */
+input, select {
+  flex: 1;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  box-shadow: inset 2px 2px 5px rgba(0,0,0,0.15),
+              inset -2px -2px 5px rgba(255,255,255,0.7);
+  cursor: pointer;
+}
+
+input:focus, select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0,123,255,0.3);
+}
+
+/* === Buttons === */
+button {
+  background: #2e7d32;
+  color: #fff;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 3px 3px 6px rgba(0,0,0,0.25),
+              -3px -3px 6px rgba(255,255,255,0.5);
+}
+
+button:hover {
+  background: #25672a;
+}
+
+#category-select option {
+  padding: 10px 12px;
+  border: 2px solid black;
+  background-color: slategray;
+  color: white;
+}
+
+/* === Summary Section === */
+.summary {
+  margin-bottom: 20px;
+}
+
+.budget-summary {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.2),
+              -5px -5px 10px rgba(255,255,255,0.5);
+}
+
+.budget-summary p {
+  flex: 1;
+  text-align: center;
+  font-size: 16px;
+  color: #333;
+}
+
+/* === Progress Bar === */
+.progress-counter {
+  background: #e0e0e0;
+  border-radius: 10px;
+  height: 14px;
+  overflow: hidden;
+  margin: 15px 0;
+}
+
+#progress-bar {
+  background: linear-gradient(90deg);
+  height: 100%;
+  width: 0%;
+  border-radius: 10px;
+  transition: width 0.4s ease;
+}
+
+#progress-text {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 5px;
+  color: #555;
+}
+
+/* === Table === */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th, td {
+  text-align: left;
+  padding: 10px 8px;
+  border-bottom: 1px solid #ddd;
+  font-size: 15px;
+}
+
+th {
+  background: #2e7d32;
+  color: #fff;
+}
+
+.edit, .delete {
+  color: #1976d2;
+  cursor: pointer;
+  font-size: 20px;
+  transition: 0.1s ease;
+  float: right;
+  margin-right: 1px;
+}
+
+.delete:hover, .edit:hover {
+  transform: scale(1.8);
+}
+
+/* === Reset Button === */
+#reset-btn {
+  margin-top: 15px;
+  background: #d32f2f;
+  color: #fff;
+}
+
+#reset-btn:hover {
+  background: #b71c1c;
+}
+
+/* === Responsive === */
+@media (max-width: 480px) {
+  body {
+    padding: 15px 10px;
+  }
+
+  .container {
+    width: 100%;
+    padding: 20px 15px;
+    border-radius: 10px;
+    box-shadow: none;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  .budget-summary p {
+    font-size: 14px;
+  }
+
+  input, select, button {
+    font-size: 14px;
+  }
+
+  th, td {
+    font-size: 13px;
+  }
+}
